@@ -1,4 +1,4 @@
-resource "google_compute_instance" "jumphost" {
+resource "google_compute_instance" "GCEserver" {
   project      = var.project
   name         = var.instance_name
   machine_type = var.machine_type
