@@ -1,5 +1,5 @@
 resource "google_compute_network" "public" {
-  name = var.public-network
+  name = var.vpc
 }
 
 
@@ -35,7 +35,7 @@ resource "google_compute_instance" "GCEserver" {
   }
 
   network_interface {
-    network = var.network
+    network = google_compute_network.public.name
     access_config {
     
     }

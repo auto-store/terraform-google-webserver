@@ -3,6 +3,10 @@ variable "project" {
   default     = "tomh-lab-1000"
 }
 
+variable "vpc" {
+  description = "name of virtual network"
+}
+
 variable "instance_name" {
   description = "GCE instance name"
 }
@@ -27,7 +31,3 @@ variable "boot_image" {
   default     = "nginx-webserver"
 }
 
-variable "network" {
- description = "network interface to use"
- default     = "web-staging-network"
-}
