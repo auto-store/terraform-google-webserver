@@ -1,3 +1,25 @@
+resource "google_compute_network" "public" {
+  name = var.public-network
+}
+
+
+resource "google_compute_firewall" "public" {
+  name    = google_compute_network.public.name
+  network = google_compute_network.public.name
+
+  allow {
+    protocol = "icmp"
+  }
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80", "8080", "443"]
+  }
+
+  source_tags = ["public-server"]
+}
+
+
 resource "google_compute_instance" "GCEserver" {
   project      = var.project
   name         = var.instance_name
