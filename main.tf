@@ -21,7 +21,7 @@ resource "google_compute_firewall" "public" {
 }
 
 
-resource "google_compute_instance" "GCEserver" {
+resource "google_compute_instance" "webserver" {
   project      = var.project
   name         = var.instance_name
   machine_type = var.machine_type
