@@ -15,8 +15,9 @@ resource "google_compute_firewall" "public" {
     protocol = "tcp"
     ports    = ["80", "8080", "443"]
   }
-
-  source_tags = ["public-server"]
+  
+  source_ranges = ["0.0.0.0/0"]
+  source_tags = ["http-server"]
 }
 
 
