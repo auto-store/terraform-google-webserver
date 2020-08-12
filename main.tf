@@ -1,6 +1,7 @@
-resource "google_compute_network" "public" {
-  project = var.project
+data "google_compute_network" "public" {
+  name = "public"
 }
+
 
 
 resource "google_compute_firewall" "public" {
