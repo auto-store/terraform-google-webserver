@@ -1,6 +1,6 @@
 variable "project" {
   description = "GCP project name"
-  default     = "tomh-lab-1000"
+  default     = "tharris-demo-env"
 }
 
 variable "vpc" {
@@ -28,6 +28,6 @@ variable "region" {
 
 variable "boot_image" {
   description = "GCE image to use"
-  default     = "nginx-webserver"
+  default     = "stack-dev"
 }
 
