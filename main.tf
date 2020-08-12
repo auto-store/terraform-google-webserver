@@ -37,7 +37,7 @@ resource "google_compute_instance" "webserver" {
   }
 
   network_interface {
-    network = google_compute_network.public.name
+    network = public
     access_config {
     
     }
