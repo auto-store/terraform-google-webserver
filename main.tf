@@ -1,26 +1,8 @@
-data "google_compute_network" "public" {
-  name = "public"
+provider "google" {
+  credentials = file("account.json")
+  project     = var.project
+  region      = var.region
 }
-
-
-
-resource "google_compute_firewall" "public" {
-  name    = data.google_compute_network.public.id
-  network = data.google_compute_network.public.id
-
-  allow {
-    protocol = "icmp"
-  }
-
-  allow {
-    protocol = "tcp"
-    ports    = ["80", "8080", "443"]
-  }
-  
-  source_ranges = ["0.0.0.0/0"]
-  source_tags = ["http-server"]
-}
-
 
 resource "google_compute_instance" "webserver" {
   project      = var.project
