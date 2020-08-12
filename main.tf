@@ -5,8 +5,8 @@ data "google_compute_network" "public" {
 
 
 resource "google_compute_firewall" "public" {
-  name    = data.google_compute_network.public.name
-  network = data.google_compute_network.public.name
+  name    = data.google_compute_network.public.id
+  network = data.google_compute_network.public.id
 
   allow {
     protocol = "icmp"
