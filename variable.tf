@@ -3,7 +3,7 @@ variable "project" {
   default     = "tharris-demo-env"
 }
 
-variable "vpc" {
+variable "network" {
   description = "name of virtual network"
   default = "default"
 }
