@@ -1,5 +1,6 @@
 resource "google_compute_network" "public" {
   name = var.vpc
+  project = var.project
 }
 
 
