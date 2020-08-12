@@ -5,7 +5,7 @@ variable "project" {
 
 variable "vpc" {
   description = "name of virtual network"
-  default = "snow-demo"
+  default = "default"
 }
 
 variable "instance_name" {
