@@ -18,7 +18,7 @@ resource "google_compute_instance" "webserver" {
   }
 
   network_interface {
-    network = "public"
+    network = var.network
   }
 }
 
